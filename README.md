@@ -48,12 +48,12 @@ git commit -m "Initial commit with full code"
 git remote add origin https://github.com/YOUR_USERNAME/clothing-shop.git
 
 # 4. Ensure the main branch is named 'master' (or 'main')
-git branch -M master
+git branch -M main
 
 # 5. Push the code to GitHub
-git push -u origin master
+git push -u origin main
 ```
-*(This uploads everything to the GitHub master branch.)*
+*(This uploads everything to the GitHub main branch.)*
 
 ---
 
@@ -210,22 +210,4 @@ git remote remove origin
 
 # Windows PowerShell command to delete the hidden .git folder:
 Remove-Item -Recurse -Force .git
-```
 
----
-
-## 8. Bonus: Troubleshooting (Windows)
-
-### Manually Kill a Stuck Port (e.g., Port 3000)
-If a process is stuck running in the background and blocking a port:
-
-1. Run this in PowerShell or CMD to find the Process ID (PID):
-   ```cmd
-   netstat -ano | findstr :3000
-   ```
-   *(Output will look like: `TCP 127.0.0.1:3000 ... LISTENING 12345`)*
-
-2. Now kill that specific process (replace `12345` with your PID):
-   ```cmd
-   taskkill /PID 12345 /F
-   ```
